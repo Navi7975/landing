@@ -1,0 +1,185 @@
+.form-container {
+    max-width: 60%;
+    margin: auto;
+    background-color: #ebecec; /* Light blue background for the form */
+    padding: 30px; /* Increased padding */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 255, 255, 0.4); /* Shadow and glowing effect */
+    margin-top: 30px; /* Space at the top */
+    margin-bottom: 30px; /* Space at the bottom */
+}
+
+.form-section {
+    margin-bottom: 30px; /* Increased space between sections */
+}
+
+.form-section-title {
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold;
+   
+    margin-bottom: 15px; /* Space below heading */
+  
+}
+
+/* Adjust form-group for horizontal alignment */
+.form-group {
+    display: flex;
+    flex-direction: row; /* Align label and input horizontally */
+    align-items: center; /* Vertically center items */
+    margin-bottom: 20px; /* Space between form elements */
+}
+
+.form-label {
+    margin-right: 20px; /* Space between label and input */
+    font-weight: bold;
+    width: 150px; /* Fixed width for labels */
+}
+
+.form-input,
+input[type="date"] {
+    padding: 10px; /* Increased padding */
+    border-radius: 8px; /* Rounded borders */
+    border: 1px solid #b2ebf2; /* Light blue border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for inputs */
+    flex: 1; /* Allow input to take remaining space */
+}
+
+/* Specific styling for Date of Birth input to be a bit less than half width */
+input[type="date"].half-width {
+    flex: 0 1 calc(31% - 20px); /* Make it approximately 40% width */
+}
+
+/* Specific styles for file input */
+input[type="file"] {
+    border: 1px solid #b2ebf2; /* Light blue border */
+    padding: 10px; /* Increased padding */
+    border-radius: 8px; /* Rounded borders for file inputs */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for file inputs */
+}
+
+/* Two-column layout for form sections */
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 20px); /* Adjust 20px to match the gap */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* Space between buttons */
+    margin-bottom: 30px; /* Space at the bottom */
+}
+
+/* Specific button styles */
+.button-submit {
+    background-color: #00796b; /* Darker blue-green background */
+    color: #ffffff;
+    padding: 14px 28px; /* Increased padding */
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1.1rem; /* Slightly larger font size */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.button-submit:hover {
+    background-color: #004d40; /* Darker shade on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.button-go-back {
+    background-color: #cfd8dc; /* Light grey background */
+    color: #333;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1.1rem; /* Slightly larger font size */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.button-go-back:hover {
+    background-color: #b0bec5; /* Darker grey on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.additional-links {
+    text-align: center;
+    margin-top: 20px; /* Space above additional links */
+}
+
+.login-link {
+    font-size: 1.1rem; /* Slightly larger font size */
+    color: black;
+}
+
+.login-link a {
+    color: #00796b; /* Matching blue-green color */
+    text-decoration: none;
+}
+
+
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Add styles for the date picker input */
+.react-datepicker__input-container {
+    width: 100%;
+}
+
+.react-datepicker__input {
+    padding: 10px; /* Increased padding */
+    border-radius: 8px; /* Rounded borders */
+    border: 1px solid #b2ebf2; /* Light blue border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+    .button-submit,
+    .button-go-back {
+        width: 100%; /* Full width for buttons */
+    }
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .form-label {
+        font-weight: bold;
+        width: auto; /* Remove the fixed width to allow the label to adjust */
+        margin-bottom: 10px; /* Space below label for better readability */
+    }
+
+    .form-container {
+        max-width: 90%; /* Adjust the width for mobile screens */
+        padding: 15px; /* Adjust the padding for mobile */
+        margin-left: 10px; /* Less margin for mobile */
+        margin-right: 10PX;
+    }
+}
+/* Adjust Document Upload section for mobile */
+@media (max-width: 767px) {
+    .form-group {
+        margin-bottom: 10px; /* Reduced margin between fields */
+    }
+    
+    input[type="file"] {
+       
+        font-size: 0.7rem; /* Slightly smaller font size */
+    }
+
+    .form-section {
+        margin-bottom: 15px; /* Reduce margin between sections */
+    }
+    
+    /* Specific style to make the document upload section appear earlier */
+    fieldset.form-section:nth-of-type(3) {
+        order: -1; /* Move the Document Upload section up */
+    }
+}

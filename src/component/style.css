@@ -1,0 +1,156 @@
+/* Ensure the section takes up the full width */
+section#programs {
+    padding: 20px;
+    background: linear-gradient(45deg, rgba(19, 19, 51, 0.604), rgb(13, 13, 53));
+    color: #fff;
+}
+
+#sprint-program, #internship-program {
+    background: linear-gradient(45deg, rgba(19, 19, 51, 0.604), rgb(13, 13, 53));
+}
+
+/* Heading Styles */
+.section-heading {
+    text-align: center;
+    font-size: 2.5rem; /* Default font size */
+    margin-bottom: 30px; /* Adds margin below the heading */
+    padding-top: 20px;   /* Adds padding above the heading */
+    color: #fff;
+}
+
+/* Remove margin from all h1 globally */
+h1 {
+    margin: 0; /* Remove default margins for all h1 elements */
+}
+
+/* Ensure no margin for h1 inside #programs section */
+#programs h1 {
+    margin: 20px;
+}
+
+/* Style for the program cards */
+.program-card {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Style for the image column */
+.col-image {
+    grid-column: 1 / 2;
+}
+
+.program-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Style for the content column */
+.col-content {
+    grid-column: 2 / 3;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Style for the toggleable details section */
+.details {
+    grid-column: 1 / -1; /* Full width */
+    padding-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* Button styling */
+.learn-more-btn, .enroll-now-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.learn-more-btn:hover, .enroll-now-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Style for the list of program details */
+.program-details {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.program-details li {
+    font-size: 1rem; /* Adjust font size as needed */
+    margin-bottom: 10px;
+}
+
+.program-details li strong {
+    color: #fff; /* Highlight the bold text, adjust as needed */
+}
+
+
+
+/* Responsive for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .program-card {
+        display: flex;
+        flex-direction: column; /* Stack image, content, and details vertically */
+        gap: 20px;
+    }
+
+    .col-image, .col-content, .details {
+        width: 100%; /* Full width for all sections */
+    }
+
+    .learn-more-btn, .enroll-now-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .details {
+        padding-top: 15px;
+    }
+
+    .section-heading {
+        font-size: 2rem; /* Smaller font size for tablets */
+    }
+}
+
+/* Responsive for mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    section#programs {
+        padding: 10px;
+    }
+
+    .program-card {
+        padding: 10px;
+        display: flex;
+        flex-direction: column; /* Stack image, content, and details */
+        gap: 15px;
+    }
+
+    .col-image, .col-content, .details {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .learn-more-btn, .enroll-now-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .details {
+        padding-top: 10px;
+    }
+
+    .section-heading {
+        font-size: 1.5rem; /* Even smaller font size for mobile */
+    }
+}
