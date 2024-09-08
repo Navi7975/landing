@@ -60,7 +60,7 @@ h1 {
 .details {
     grid-column: 1 / -1; /* Full width */
     padding-top: 20px;
-    margin-left: 15%;
+    margin-left: 5%;
     margin-right: 15%;
 }
 
@@ -154,3 +154,19 @@ h1 {
         font-size: 1.5rem; /* Even smaller font size for mobile */
     }
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .col-content {
+      grid-column: 1 / -1; /* Make it span the full width in mobile view */
+      margin-right: 5%; /* Adjust margin for smaller screens */
+      margin-left: 5%; /* Add left margin to balance the layout */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col-content {
+      margin-right: 0; /* Remove right margin for very small screens */
+      margin-left: 0; /* Remove left margin for very small screens */
+    }
+  }

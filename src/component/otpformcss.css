@@ -6,7 +6,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-.login-container {
+.otp-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body, html {
     background: url('https://iimstc.com/wp-content/uploads/slider/cache/e0a4105f14d43d1eae165e5b1f24238b/slider23.jpg') no-repeat center center/cover;
 }
 
-.login-form {
+.otp-form {
     background-color: rgba(0, 0, 0, 0.815);
     padding: 20px;
     border-radius: 8px;
@@ -26,12 +26,12 @@ body, html {
     padding-bottom: 40px;
 }
 
-.login-form-section {
+.otp-form-section {
     margin-bottom: 10px;
 }
 
-/* Legend styles with logo next to "Login" text */
-.login-form-legend {
+/* Legend styles with logo next to "Enter OTP" text */
+.otp-form-legend {
     display: flex;
     align-items: center;
     font-size: 1.9rem;
@@ -39,25 +39,25 @@ body, html {
     margin-bottom: 20px;
 }
 
-.login-text {
+.otp-text {
     margin-left: 10px; /* Add spacing between logo and text */
 }
 
-.login-legend-logo {
+.otp-legend-logo {
     width: 40px; /* Adjust logo size */
     height: auto;
 }
 
-.login-form-group {
+.otp-form-group {
     margin-bottom: 15px;
 }
 
-.login-form-label {
+.otp-form-label {
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-.login-form-input {
+.otp-form-input {
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
@@ -66,7 +66,7 @@ body, html {
 }
 
 /* Buttons container */
-.login-form-btn-container {
+.otp-form-btn-container {
     display: flex;
     justify-content: flex-end;
     gap: 70px;
@@ -74,7 +74,7 @@ body, html {
 }
 
 /* Common button styles */
-.login-form-btn {
+.otp-form-btn {
     flex: 0 1 40%;
     padding: 10px;
     border-radius: 8px;
@@ -83,56 +83,56 @@ body, html {
     transition: background-color 0.3s;
 }
 
-/* Login button specific styles */
-.login-form-btn-submit {
+/* Submit button specific styles */
+.otp-form-btn-submit {
     background-color: #2563eb;
     color: #ffffff;
     border: none;
 }
 
-.login-form-btn-submit:hover {
+.otp-form-btn-submit:hover {
     background-color: #1d4ed8;
 }
 
 /* Go Back button specific styles */
-.login-form-btn-go-back {
+.otp-form-btn-go-back {
     background-color: #ffffff;
     color: #000000;
     border: 2px solid #000000;
 }
 
-.login-form-btn-go-back:hover {
+.otp-form-btn-go-back:hover {
     background-color: #f5f5f5;
 }
 
 /* Additional links */
-.login-additional-links {
+.otp-additional-links {
     text-align: center;
     margin-top: 20px;
 }
 
-.login-link {
+.otp-link {
     color: #2563eb;
     text-decoration: none;
 }
 
-.login-link:hover {
+.otp-link:hover {
     text-decoration: underline;
 }
 
 /* Responsive adjustments */
 @media (max-width: 500px) {
-    .login-form {
+    .otp-form {
         margin-left: 15px;
         margin-right: 15px;
     }
 
-    .login-form-btn {
+    .otp-form-btn {
         padding: 10px 5px;
         flex: 0 1 45%;
     }
 
-    .login-form-btn-container {
+    .otp-form-btn-container {
         gap: 22px;
     }
 }
@@ -141,8 +141,9 @@ body, html {
 fieldset {
     border: none;
 }
-.login-legend-logo {
+
+.otp-legend-logo {
     width: 140px;  /* Adjust width as needed */
     height: 70px; /* Adjust height as needed */
-    margin-right: 10px; /* Adds some space between the logo and the login text */
+    margin-right: 10px; /* Adds some space between the logo and the OTP text */
 }

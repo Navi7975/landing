@@ -74,19 +74,24 @@ const HomeSection = () => {
 
 const LandingPage = () => {
 
-
-  
-
+  const navigate = useNavigate();
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     AOS.init(); // Initialize AOS for animations
   }, []);
 
+  const handleNavToggle = () => {
+    setIsNavOpen(!isNavOpen);
+  };
 
-  const navigate = useNavigate();
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   const handleClickOnLogin = () => {
-    navigate('/login'); // Navigate to the Form page
-    
+    navigate('/login'); // Navigate to the Login page
   };
   
 
@@ -94,14 +99,19 @@ const LandingPage = () => {
     <>
       {/* Navigation */}
       <nav>
-        <div className="logo"><img src="./image/log.webp" alt="logo" /></div>
-        <div className="nav-container">
+        <div className="logo">
+          <img src="./image/log.webp" alt="logo" />
+        </div>
+        <button className="nav-toggle" aria-label="Toggle navigation" onClick={handleNavToggle}>
+          &#9776;
+        </button>
+        <div className={`nav-container ${isNavOpen ? 'active' : ''}`}>
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
             <li className="dropdown">
-              <a href="#program">Our Program</a>
-              <ul className="dropdown-menu">
-                <li><a href="#program-intro"> Sprint Program</a></li>
+              <a href="#program" onClick={handleDropdownToggle}>Our Program</a>
+              <ul className={`dropdown-menu ${dropdownOpen ? 'active' : ''}`}>
+                <li><a href="#program-intro">Sprint Program</a></li>
                 <li><a href="#internship-program">Internship Program</a></li>
               </ul>
             </li>

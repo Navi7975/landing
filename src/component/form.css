@@ -1,10 +1,10 @@
 .form-container {
-    max-width: 60%;
+    max-width: 40%;
     margin: auto;
-    background-color: #ebecec; /* Light blue background for the form */
+    background-color: #000000ed;
     padding: 30px; /* Increased padding */
     border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 255, 255, 0.4); /* Shadow and glowing effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.778), 0 0 15px rgba(0, 255, 255, 0.4); /* Shadow and glowing effect */
     margin-top: 30px; /* Space at the top */
     margin-bottom: 30px; /* Space at the bottom */
 }
@@ -46,7 +46,7 @@ input[type="date"] {
 
 /* Specific styling for Date of Birth input to be a bit less than half width */
 input[type="date"].half-width {
-    flex: 0 1 calc(31% - 20px); /* Make it approximately 40% width */
+    flex: 0 1 calc(27% - 20px); /* Make it approximately 40% width */
 }
 
 /* Specific styles for file input */
@@ -183,3 +183,112 @@ input[type="file"] {
         order: -1; /* Move the Document Upload section up */
     }
 }
+
+/* Full-page background */
+.form-background {
+    background: url('https://iimstc.com/wp-content/uploads/slider/cache/e0a4105f14d43d1eae165e5b1f24238b/slider23.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Form container with transparent black background */
+  .form-container {
+    max-width: 40%;
+    background-color: #000000ed;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: white; /* Text color for contrast */
+  }
+  
+  .form-section-title {
+    color: #ffffff; /* Ensure text is visible */
+  }
+  
+  /* Adjust other styles if necessary */
+  .form-input {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 767px) {
+    .form-container {
+      max-width: 90%;
+      padding: 20px;
+    }
+  }
+  
+
+
+  /* Button container styles */
+.btn-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 15px; /* Space between buttons */
+    margin-bottom: 30px; /* Space at the bottom */
+}
+
+/* Submit Button styles */
+.button-submit {
+    background-color: #00796b; /* Darker blue-green background */
+    color: #ffffff;
+    padding: 12px 24px; /* Adjusted padding */
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1.1rem; /* Slightly larger font size */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    width: auto; /* Remove full width */
+}
+
+/* Go Back Button styles */
+.button-go-back {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    padding: 12px 24px;
+    border: 2px solid #000000; /* Add a black border */
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: auto;
+}
+
+/* Hover effect for submit button */
+.button-submit:hover {
+    background-color: #004d40; /* Darker shade on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Hover effect for go-back button */
+.button-go-back:hover {
+    background-color: #f5f5f5; /* Light grey on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.login-legend-logo {
+    width: 140px;  /* Adjust width as needed */
+    height: 70px; /* Adjust height as needed */
+    margin-right: 10px; /* Adds some space between the logo and the login text */
+}
+
+
+/* Form Heading Style */
+.form-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 20px; /* Space below heading */
+  }
+  
+
+

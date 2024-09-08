@@ -316,6 +316,8 @@ body {
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 100px;
+   
+
   }
   
   .carousel-inner {
@@ -902,3 +904,221 @@ body {
     margin-right: 5px; /* Space between links */
   }
   
+
+
+
+  /* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #071523, #001932); /* Gradient background */
+  color: white;
+  position: relative;
+}
+
+nav .logo img {
+  max-width: 140px;
+  height: 70px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: right;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding-right: 50px;
+}
+
+.nav-links li {
+  display: inline;
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: color 0.3s ease;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+
+/* Dropdown Menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #071523;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #003d5b;
+}
+
+/* Toggle Button for Mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links.active {
+  display: block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: color 0.3s ease;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: color 0.3s ease;
+  font-weight: bolder;
+  font-size: 1.2rem; /* Increased font size for better visibility */
+}
+
+
+@media (max-width: 768px) {
+  .nav-container {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 20px;
+    background: linear-gradient(45deg, #071523, #001932);
+    padding: 10px;
+    width: 200px; /* Adjust as needed */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    left: auto; /* Ensure the dropdown menu appears aligned with the parent */
+  }
+  .nav-container {
+    display: none;
+  }
+  
+  .nav-container.active {
+    display: block;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown-menu.active {
+    display: block;
+  }
+  .nav-links li{
+    margin: 0; /* Remove default margins between list items */
+  padding: 0; /* Remove default padding */
+  margin-bottom: 2px; 
+  }
+  
+}
+
+
+
+
+/* Media query for mobile sizes */
+@media (max-width: 768px) {
+  .carousel-container {
+    margin-top: 100px; /* Set margin-top to 80px for mobile screens */
+  }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-details p {
+    font-size: 0.7rem; /* Smaller font size for mobile screens */
+  }
+  
+  .contact-details a {
+    font-size: 0.7rem; /* Smaller font size for links on mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-details p {
+    font-size: 0.7rem; /* Even smaller font size for very small screens */
+  }
+
+  .contact-details a {
+    font-size: 0.7rem; /* Even smaller font size for links on very small screens */
+  }
+}
+
+
